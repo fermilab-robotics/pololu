@@ -31,7 +31,7 @@ class POLOLU_36v4:
         self.DirPin = DirPin
         self.StepPin = StepPin
     
-    def step_forward(self, count, delay=100):
+    def step_forward(self, count, delay=1):
         """ step forward 'count' number of steps """
         """ with a default delay of 100 mS between each step"""
         for i in range(0, count):
@@ -41,7 +41,7 @@ class POLOLU_36v4:
             self.StepPin.off()
             time.sleep_ms(delay)
 
-    def step_backwards(self, count, delay=100):
+    def step_backwards(self, count, delay=1):
         """ step backwards 'count' number of steps """
         """ with a default delay of 100 mS between each step"""
         for i in range(0, count):
